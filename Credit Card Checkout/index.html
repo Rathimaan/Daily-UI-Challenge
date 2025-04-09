@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Credit Card Checkout</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow fixed top-0 left-0 w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center">
+          <img src="./images/secure-payment.png" alt="Logo" class="h-10 w-10 mr-2">
+          <span class="font-bold text-xl">Secure Payment</span>
+        </div>
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"
+                 viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden md:flex space-x-6">
+          <a href="#" class="text-gray-700 hover:text-blue-600">Home</a>
+          <a href="#" class="text-gray-700 hover:text-blue-600">Product</a>
+          <a href="#" class="text-gray-700 hover:text-blue-600">Support</a>
+          <a href="#" class="text-gray-700 hover:text-blue-600">Contact</a>
+          <a href="#" class="text-gray-700 hover:text-blue-600">FAQs</a>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden mt-2 space-y-2">
+        <a href="#" class="block text-gray-700 hover:text-blue-600">Home</a>
+        <a href="#" class="block text-gray-700 hover:text-blue-600">Product</a>
+        <a href="#" class="block text-gray-700 hover:text-blue-600">Support</a>
+        <a href="#" class="block text-gray-700 hover:text-blue-600">Contact</a>
+        <a href="#" class="block text-gray-700 hover:text-blue-600">FAQs</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Checkout Container -->
+  <div class="flex items-center justify-center pt-24 px-4">
+    <div class="max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+      <!-- Payment Section -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg">
+        <h2 class="text-2xl font-semibold mb-6">Payment Details</h2>
+        <form>
+          <div class="mb-4">
+            <label class="block text-sm font-medium mb-1">Name on Card</label>
+            <input type="text" placeholder="John Doe" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          </div>
+          <div class="mb-4">
+            <label class="block text-sm font-medium mb-1">Card Number</label>
+            <input type="text" placeholder="1234 5678 9012 3456" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          </div>
+          <div class="flex gap-4 mb-4">
+            <div class="w-1/2">
+              <label class="block text-sm font-medium mb-1">Expiry</label>
+              <input type="text" placeholder="MM/YY" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            </div>
+            <div class="w-1/2">
+              <label class="block text-sm font-medium mb-1">CVC</label>
+              <input type="text" placeholder="123" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            </div>
+          </div>
+          <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-xl text-lg font-semibold hover:bg-blue-700 transition">Pay Now</button>
+        </form>
+      </div>
+
+      <!-- Order Summary -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg">
+        <h2 class="text-2xl font-semibold mb-6">Order Summary</h2>
+        <ul class="space-y-4 mb-6">
+          <li class="flex justify-between border-b pb-2">
+            <span>Item 1</span>
+            <span>$29.99</span>
+          </li>
+          <li class="flex justify-between border-b pb-2">
+            <span>Item 2</span>
+            <span>$15.50</span>
+          </li>
+          <li class="flex justify-between border-b pb-2">
+            <span>Shipping</span>
+            <span>$5.00</span>
+          </li>
+          <li class="flex justify-between font-bold text-lg mt-2">
+            <span>Total</span>
+            <span>$50.49</span>
+          </li>
+        </ul>
+        <p class="text-sm text-gray-500">Your payment is encrypted and secure.</p>
+      </div>
+    </div>
+  </div>
+  
+
+  <script>
+    // Toggle mobile menu
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
