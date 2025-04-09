@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Account Settings</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="d-flex" id="wrapper">
+    
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+      <div class="sidebar-heading d-flex align-items-center gap-2">
+        <img src="./image/travel logo.png" alt="Logo" height="40">
+        <span>TripMate</span>
+      </div>
+
+      <div class="sidebar-section">
+        <h6>Account</h6>
+        <ul class="sidebar-links">
+          <li><a class="active" href="#">Profile Info</a></li>
+          <li><a href="#">Security Settings</a></li>
+          <li><a href="#">Linked Accounts</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h6>Bookings</h6>
+        <ul class="sidebar-links">
+          <li><a href="#">My Trips</a></li>
+          <li><a href="#">Payment Methods</a></li>
+          <li><a href="#">Refund Preferences</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h6>Travel Preferences</h6>
+        <ul class="sidebar-links">
+          <li><a href="#">Seat Choice</a></li>
+          <li><a href="#">Meal Options</a></li>
+          <li><a href="#">Preferred Class</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h6>Notifications</h6>
+        <ul class="sidebar-links">
+          <li><a href="#">Trip Alerts</a></li>
+          <li><a href="#">Promotions</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h6>Support</h6>
+        <ul class="sidebar-links">
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+        <h4 class="mb-4">Personal Information</h4>
+        <form>
+          <h5 class="mb-3">Profile Picture</h5>
+          <div class="d-flex align-items-center mb-4">
+            <img src="./image/profile pic.jpg" alt="Profile" class="rounded-circle me-3 border" width="100" height="100">
+            <div>
+              <label for="profileImage" class="form-label">Upload new profile photo</label>
+              <input class="form-control mb-2" type="file" id="profileImage">
+              <div class="form-text mb-2">Allowed JPG, PNG. Max size: 2MB</div>
+              <button type="button" class="btn btn-sm btn-outline-danger">Remove</button>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="firstName">First Name</label>
+              <input type="text" class="form-control" id="firstName" placeholder="John">
+            </div>
+            <div class="col-md-6">
+              <label for="lastName">Last Name</label>
+              <input type="text" class="form-control" id="lastName" placeholder="Doe">
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="example@email.com">
+            </div>
+            <div class="col-md-6">
+              <label for="phone">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" placeholder="+91-9876543210">
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="gender">Gender</label>
+              <select class="form-control" id="gender">
+                <option selected disabled>Choose...</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="dob">Date of Birth</label>
+              <input type="date" class="form-control" id="dob">
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" placeholder="Street, Apartment, etc.">
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-md-4">
+              <label for="country">Country</label>
+              <input type="text" class="form-control" id="country" placeholder="India">
+            </div>
+            <div class="col-md-4">
+              <label for="city">City</label>
+              <input type="text" class="form-control" id="city" placeholder="Chennai">
+            </div>
+            <div class="col-md-4">
+              <label for="postalCode">Postal Code</label>
+              <input type="text" class="form-control" id="postalCode" placeholder="600001">
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
