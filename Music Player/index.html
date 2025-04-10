@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Music Player</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="./image/logo.svg" alt="Spotify Logo" class="logo-img" />
+        <span>Spotify</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Search</a></li>
+          <li><a href="#">Your Library</a></li>
+        </ul>
+      </nav>
+      <div class="playlists">
+        <h3>Playlists</h3>
+        <ul>
+          <li><a href="#">Liked Songs</a></li>
+          <li><a href="#">Discover Weekly</a></li>
+          <li><a href="#">Daily Mix 1</a></li>
+          <li><a href="#">Daily Mix 2</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header>
+        <h1>Good Evening</h1>
+        <div class="playlist-cards">
+          <div class="card small-card">
+            <img src="./image/likedsongs.jpeg" alt="Liked Songs" />
+            <p>Liked Songs</p>
+          </div>
+          <div class="card small-card">
+            <img src="./image/discoverWeekly.jpeg" alt="Discover Weekly" />
+            <p>Discover Weekly</p>
+          </div>
+          <div class="card small-card">
+            <img src="./image/spotifywrapped.png" alt="Daily Mix 1" />
+            <p>Spotify Wrapped</p>
+          </div>
+          <div class="card small-card">
+            <img src="./image/Topsongs.jpg" height="" alt="Daily Mix 1" />
+            <p>Top Songs</p>
+          </div>
+          <div class="card small-card">
+            <img src="./image/tamilhits.jpeg" alt="Daily Mix 1" />
+            <p>Tamil Hits</p>
+          </div>
+        </div>
+      </header>
+
+      <section class="section">
+        <h2>Made For You</h2>
+        <div class="cards">
+          <div class="card">
+            <img src="./image/cover1.jpeg" alt="Daily Mix 1" />
+            <p>Daily Mix 1</p>
+          </div>
+          <div class="card">
+            <img src="./image/cover2.jpeg" alt="Daily Mix 2" />
+            <p>Daily Mix 2</p>
+          </div>
+          <div class="card">
+            <img src="./image/cover3.jpeg" alt="Daily Mix 3" />
+            <p>Daily Mix 3</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Music Player -->
+  <footer class="music-player">
+    <div class="track-info">
+      <img src="./image/background.jpeg" alt="Track Cover" class="cover-img" />
+      <div>
+        <p class="track-title">Nee Partha Vizhigal</p>
+        <small class="track-artist">Anirudh Ravichander</small>
+      </div>
+    </div>
+
+    <div class="player-controls">
+      <div class="controls-row">
+        <button class="control-btn"><i class="fas fa-step-backward"></i></button>
+        <button class="control-btn"><i class="fas fa-play"></i></button>
+        <button class="control-btn"><i class="fas fa-step-forward"></i></button>
+      </div>
+      <div class="progress-wrapper">
+        <span class="time-stamp">1:20</span>
+        <input type="range" value="30" min="0" max="100" />
+        <span class="time-stamp">3:45</span>
+      </div>
+    </div>
+
+    <div class="volume-control">
+      <i class="fas fa-volume-up"></i>
+      <input type="range" id="volume" name="volume" />
+      <span>50% Volume</span>
+    </div>
+  </footer>
+</body>
+</html>
